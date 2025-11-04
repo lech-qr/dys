@@ -16,12 +16,15 @@ get_header();
         <div class="container"><div class="row"><div class="col-12 pt-5"><?php echo get_cat_name( $category_id = 5 );?></div></div></div>
     </h2>
     <?php
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $args = array(
         'post_type' => 'post',
         'post_status' => 'publish',
         'category_name' => 'aktualnosci',
-        'posts_per_page' => 10,
+        'posts_per_page' => 4,
+        'paged'          => $paged
     );
+    
     $arr_posts = new WP_Query($args);
 
     if ($arr_posts->have_posts()) :
@@ -52,9 +55,20 @@ get_header();
 
             </article>
             <?php
-        endwhile;
-    endif;
-    ?>
+        endwhile; ?>
+
+        <nav class="navigation post-navigation mb-5" aria-label="Wpisy">
+            <div class="nav-links row">
+                <div class="nav-prev col-6">
+                    <?php next_posts_link( '<i class="bi bi-arrow-left-circle"></i><span>Wcześniejsze wpisy</span>', $arr_posts ->max_num_pages); ?>
+                </div>
+                <div class="nav-next col-6">
+                    <?php previous_posts_link( '<span>Późniejsze wpisy</span><i class="bi bi-arrow-right-circle"></i>' ); ?>
+                </div>
+            </div>
+        </nav>
+
+    <?php endif; ?>
         </div>
     </div>
 </section>

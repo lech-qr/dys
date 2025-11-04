@@ -29,7 +29,6 @@
                             10:30
                           <span class="position-absolute top-0 start-100 translate-middle p-1 bg-warning border border-light rounded-circle"></span>
                         </span>
-                        <span class="badge bg-light text-dark">12:00</span>
                         <span class="badge bg-light text-dark">16:00</span>
                         <br>Dni powszednie: 
                         <span class="badge bg-light text-dark">7:00</span>

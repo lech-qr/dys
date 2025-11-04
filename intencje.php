@@ -13,7 +13,13 @@ get_header();
 
 <section class="intencje">
     <h2>
-        <div class="container"><div class="row"><div class="col-12 pt-5"><?php echo get_cat_name( 8 );?></div></div></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pt-5"><?php echo get_cat_name( 8 );?>
+                    <a href="https://dys.grobonet.com/grobonet/intencje.php?id=intencja" target="_blank"><i class="bi bi-calendar"></i>Zamów intencję mszalną</a>
+                </div>
+            </div>
+        </div>
     </h2>
     <?php
     $args_ogl = array(

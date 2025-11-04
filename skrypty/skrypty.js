@@ -124,4 +124,8 @@ jQuery(document).ready(function () {
     // Linia za blokiem
     $('.wp-block-group > .wp-block-group').append('<span class="linia_1"></span>');
 
+    // Inwestycje
+    $('.post-791 div.wp-block-columns').addClass('row');
+    $('.post-791 div.wp-block-column').addClass('col-md-4 col-sm-12');
+
 });

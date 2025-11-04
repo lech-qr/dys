@@ -40,7 +40,10 @@ get_header();
                      <?php endif; ?>
                 ></a>
                 <div class="karta mt--7">
-                    <div class="data"><i class="bi bi-calendar-check-fill"></i><?php echo get_the_date( 'd-M-Y' ); ?></div>
+                    <div class="data"><i class="bi bi-calendar-check-fill"></i><?php echo get_the_date( 'd-M-Y' ); ?> - <?php 
+                        $tydzien = date('d-M-Y', strtotime('+6 day', get_the_date('U')));
+                        echo strftime('%d-%b-%Y',strtotime($tydzien));
+                    ?></div>
                     <h3>
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>

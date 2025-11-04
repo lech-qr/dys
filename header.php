@@ -15,18 +15,26 @@
 
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/skrypty/jquery.min.js'; ?>"></script>
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/skrypty/bootstrap.min.js'; ?>"></script>
-        <script type="text/javascript" src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/skrypty/jquery.youtube-background.min.js'; ?>"></script>
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/skrypty/skrypty.min.js'; ?>"></script>
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/skrypty/wkosciolach.min.js'; ?>"></script>
-        <script src="http://dys.jet-it.pl/wp-content/plugins/gallery-block-lightbox/dist/baguetteBox.min.js?ver=1.11.1" id="baguettebox-js"></script>
+        <script src="<?php echo get_stylesheet_directory_uri() . '/../../plugins/gallery-block-lightbox/dist/baguetteBox.min.js?ver=1.11.1'; ?>"> id="baguettebox-js"></script>
         <script id="baguettebox-js-after">
             window.addEventListener("load", function() {baguetteBox.run(".wp-block-gallery,:not(.wp-block-gallery)>.wp-block-image,.wp-block-media-text__media,.gallery,.wp-block-coblocks-gallery-masonry,.wp-block-coblocks-gallery-stacked,.wp-block-coblocks-gallery-collage,.wp-block-coblocks-gallery-offset,.wp-block-coblocks-gallery-stacked,.mgl-gallery",{captions:function(t){var e=t.parentElement.classList.contains("wp-block-image")||t.parentElement.classList.contains("wp-block-media-text__media")?t.parentElement.querySelector("figcaption"):t.parentElement.parentElement.querySelector("figcaption,dd");return!!e&&e.innerHTML;},filter:/.+\.(gif|jpe?g|png|webp|svg|avif|heif|heic|tif?f|)($|\?)/i});});
         </script>
         
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/css/bootstrap.min.css'; ?>">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style/css/animate.min.css'; ?>">
         <link rel="preload stylesheet" as="style" href="<?php bloginfo('stylesheet_url'); ?>">
-        <link rel="stylesheet" id="baguettebox-css-css" href="http://dys.jet-it.pl/wp-content/plugins/gallery-block-lightbox/dist/baguetteBox.min.css?ver=1.11.1" media="all">
+        <link rel="stylesheet" id="baguettebox-css-css" href="<?php echo get_stylesheet_directory_uri() . '/../../plugins/gallery-block-lightbox/dist/baguetteBox.min.css?ver=1.11.1'; ?>" media="all">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGW0XFPV40"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MGW0XFPV40');
+        </script>        
     </head>
 
     <body id="str_<?php echo get_the_ID(); ?> gora" <?php post_class(); ?>>

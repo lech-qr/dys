@@ -251,9 +251,11 @@ header {
                                     }
                                 }
 
-                                &.godziny {
+                                &.intencje {
                                     &:hover {
-                                        color: @nieb_2;
+                                        i {
+                                            color: #51a832;
+                                        }
                                     }
                                 }
 
@@ -532,6 +534,16 @@ body#str_2 {
     }
 }
 
+body.post-791 {
+    .wp-block-columns {
+        .wp-block-column {
+            img {
+                padding: 0;
+            }
+        }
+    }
+}
+
 #transmisja {
     .modal-dialog {
         max-width: 80vw;
@@ -575,6 +587,16 @@ section {
         text-transform: uppercase;
         text-align: center;
         padding: 0 0 3rem 0;
+
+        a {
+            display: block;
+            margin-top: 1rem;
+            color: @czer_1;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
     }
 
     h3 {
@@ -617,6 +639,7 @@ section {
             align-items: center;
             flex: 1;
             width: 80%;
+            min-height: 50vh;
             margin: 0 10% 7% 10%;
             padding: 7%;
             background-color: #fff;
@@ -659,6 +682,10 @@ section {
 
                 a {
                     color: #4a4a4a;
+                }
+
+                &.has-large-font-size {
+                    font-size: 1.2rem;
                 }
 
             }
@@ -786,6 +813,13 @@ section {
                         }
 
                         &:hover {
+                            &.intencje {
+                                i {
+                                    color: #51a832;
+                                    .transition(.3s);
+                                }
+                            }
+
                             &.transmisja {
                                 i {
                                     color: #FF0000;

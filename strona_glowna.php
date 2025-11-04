@@ -43,7 +43,7 @@ get_header();
         'post_type' => 'post',
         'post_status' => 'publish',
         'category_name' => 'aktualnosci',
-        'posts_per_page' => 4,
+        'posts_per_page' => 6,
     );
     $arr_posts = new WP_Query($args);
 
@@ -76,7 +76,10 @@ get_header();
             <?php
         endwhile;
     endif;
-    ?>            
+    ?>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn_czer" href="/aktualnosci">Zobacz wszystkie aktualności</a>
+            </div>
         </div>
     </div>
 </section>
@@ -138,9 +141,10 @@ get_header();
                      style="background-image: url(<?php the_post_thumbnail_url(); ?>)"
                      <?php endif; ?>
                 ></a>
-                <div class="karta">
-                    <div class="data"><i class="bi bi-calendar-check-fill"></i><?php echo get_the_date( 'd-M-Y' ); ?></div>
-                    <h3>
+                <div class="karta">                    <div class="data"><i class="bi bi-calendar-check-fill"></i><?php echo get_the_date( 'd-M-Y' ); ?> - <?php 
+                        $tydzien = date('d-M-Y', strtotime('+6 day', get_the_date('U')));
+                        echo strftime('%d-%b-%Y',strtotime($tydzien));
+                    ?></div>                    <h3>
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>
                         </a>
@@ -153,7 +157,7 @@ get_header();
             <?php
         endwhile;
     endif;
-    ?>            
+    ?>   
         </div>
     </div>
 </section>

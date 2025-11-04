@@ -21,12 +21,12 @@ get_header();
                         <?php endwhile;
                     else: ?>
                         <p><?php _e('Przykro mi, brak wpisu…'); ?></p>
-                    <?php endif; 
-                    
-                    next_posts_link( 'Older posts' );
-                    // Reset Query
-                    // wp_reset_query();
-                    ?>
+                    <?php endif; ?>
+                    <?php 
+                    if ( in_category('aktualnosci') ) {
+                        include 'elementy/post-pagin.php';
+                    }
+                    ?> 
             </div>
         </article>        
     </div>
