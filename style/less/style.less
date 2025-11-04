@@ -221,7 +221,6 @@ header {
                                         .radius(0%);
                                     }
                                 }
-
                                 &.transmisja {
                                     span {
                                         display: inline-block;
@@ -250,7 +249,20 @@ header {
                                         }
                                     }
                                 }
-
+                                &.vatican-news {
+                                    i {
+                                        display: block;
+                                        width: 27px;
+                                        height: 27px;
+                                        background-image: url('../../obrazy/vatican_normal.svg');
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                    }
+                                    &:hover i {
+                                        background-image: url('../../obrazy/vatican_hover.svg');
+                                    }
+                                }
                                 &.intencje {
                                     &:hover {
                                         i {
@@ -1229,16 +1241,16 @@ footer {
                             ul {
                                 li {
                                     height: 10vw;
-                                    width: 20%;
+                                    // width: 20%;
 
-                                    &:first-child {
-                                        span {
-                                            margin-left: -1.5rem;
-                                            margin-top: -1.5rem;
-                                            width: 3rem;
-                                            height: 3rem;
-                                        }
-                                    }
+                                    // &:first-child {
+                                    //     span {
+                                    //         margin-left: -1.5rem;
+                                    //         margin-top: -1.5rem;
+                                    //         width: 3rem;
+                                    //         height: 3rem;
+                                    //     }
+                                    // }
                                 }
                             }
                         }

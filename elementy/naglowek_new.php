@@ -16,9 +16,12 @@
                 </div>
                 <div class="col-sm-12 col-md-3 menu">              
                     <ul>
+                        <li class="vatican-news" title="Vatican News">
+                            <a href="https://www.vaticannews.va/pl.html" target="_blank"><i class="vatican-news-icon"></i><span></span></a>
+                        </li>                        
                         <li class="intencje" title="Zamów intencję mszalną">
                             <a href="https://dys.grobonet.com/grobonet/intencje.php?id=intencja" target="_blank"><i class="bi bi-calendar"></i><span></span></a>
-                        </li>                        
+                        </li>
                         <li class="transmisja" title="Transmisja on-line" data-bs-toggle="modal" data-bs-target="#transmisja">
                             <i class="bi bi-youtube"></i><span class="animate__animated animate__heartBeat animate__infinite infinite"></span>
                         </li>
